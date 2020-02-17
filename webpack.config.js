@@ -6,7 +6,7 @@ module.exports = {
     mode: "development",
     
     entry: {
-        main: path.resolve(__dirname, 'src', 'main.ts')
+        main: path.resolve(__dirname, 'src', 'main.tsx')
     },
 
     devtool: 'inline-source-map',
@@ -66,7 +66,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            title: 'Development',
+            template: './src/index.html',
             favicon: './src/icon.png'
         })
     ]
