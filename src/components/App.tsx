@@ -1,8 +1,12 @@
 import * as React from 'react';
 
+import '../stylesheets/style.css';
+
+import { Game } from './Game';
+
 export class App extends React.Component {
 
     render() {
-        return <h1>Hola, Mundo!!!</h1>;
+        return <Game/>;
     }
 }
