@@ -6,7 +6,7 @@ module.exports = {
     mode: "development",
     
     entry: {
-        main: path.resolve(__dirname, 'src', 'main.ts')
+        main: path.resolve(__dirname, 'src', 'main.tsx')
     },
 
     devtool: 'inline-source-map',
@@ -66,8 +66,9 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            title: 'Development',
-            favicon: './src/icon.png'
+            template: './public/index.tpl',
+            title: 'Awesome App by React',
+            favicon: './public/icon.png'
         })
     ]
 };
