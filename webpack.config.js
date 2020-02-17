@@ -66,8 +66,9 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            template: './src/index.html',
-            favicon: './src/icon.png'
+            template: './public/index.tpl',
+            title: 'Awesome App by React',
+            favicon: './public/icon.png'
         })
     ]
 };
