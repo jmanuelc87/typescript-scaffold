@@ -1,8 +1,15 @@
 import * as React from 'react';
+import AddTodo from './AddTodo';
+import VisibleTodoList from './VisibleTodoList';
+import { Footer } from './Footer';
 
 export class App extends React.Component {
 
     render() {
-        return <h1>Hola, Mundo!!!</h1>;
+        return <>
+            <AddTodo />
+            <VisibleTodoList />
+            <Footer />
+        </>;
     }
 }

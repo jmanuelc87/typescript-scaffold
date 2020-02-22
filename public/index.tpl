@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
-<body id="root">
+<body>
+    <div id="root"></div>
 </body>
 </html>

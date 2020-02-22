@@ -8,6 +8,8 @@ export const VisibilityFilter = {
     SHOW_ACTIVE: 'SHOW_ACTIVE'
 };
 
+let nextTodoId = 0;
+
 export interface AbstractTodo {
     type: string;
     payload: any;
@@ -16,6 +18,7 @@ export interface AbstractTodo {
 export interface AddTodoPayload {
     text: string;
     completed: boolean;
+    id: number;
 }
 
 export interface AddTodo extends AbstractTodo {
@@ -42,8 +45,9 @@ export function addTodo(obj: AddTodoPayload): AddTodo {
     return {
         type: ADD_TODO,
         payload: {
+            id: ++nextTodoId,
             text: obj.text,
-            completed: obj.completed
+            completed: false
         }
     };
 }
